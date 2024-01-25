@@ -33,7 +33,7 @@ resources:
     cpu: 500m
     memory: 4Gi
 auth:
-  username: kiwi
+  username: brenda
   password: ${random_password.clickhouse_password_test.result}
 
 keeper:

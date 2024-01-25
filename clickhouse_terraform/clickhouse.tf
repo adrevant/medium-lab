@@ -76,7 +76,7 @@ resource "helm_release" "zookeeper-test" {
   values = [
     <<EOF
 global:
-  storageClass: "gp3"
+  storageClass: "gp3" # for persistance volumes
 
 replicaCount: 1
 image:

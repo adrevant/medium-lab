@@ -18,7 +18,7 @@ resource "helm_release" "clickhouse-test" {
   values = [
     <<EOF
 global:
-  storageClass: "gp3"
+  storageClass: "gp3" # for persistence volumes
 image:
   registry: docker.io
   repository: bitnami/clickhouse

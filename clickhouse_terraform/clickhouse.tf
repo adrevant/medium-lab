@@ -55,11 +55,11 @@ zookeeper:
 
 externalZookeeper:
   servers:
-    - zookeeper-test.stg
+    - zookeeper.stg # name (provider's context)
   port: 2181
     EOF
   ]
-  depends_on = [helm_release.zookeeper-test]
+  depends_on = [helm_release.zookeeper-test] # resource name (terrafomr context)
 }
 
 resource "helm_release" "zookeeper-test" {

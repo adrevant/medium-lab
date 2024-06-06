@@ -1,9 +1,9 @@
 terraform {
   # where terraform stateful info will be stored
   backend "s3" {
-    bucket = "your_bucket"
-    key    = ".../.../data.tfstate" # file to be updated when a new tf deploy is made
-    region = "your-aws-region"
+    bucket = "kiwi-devops"
+    key    = "terraform/cluster-infra/app/data.tfstate" # file to be updated when a new tf deploy is made
+    region = "us-west-1"
   }
 
   required_providers {
@@ -25,7 +25,7 @@ terraform {
 # no credentials required as they are being
 # read from AWS cli as env vars
 provider "aws" {
-  region = "your-aws-region"
+  region = "us-west-2"
 }
 
 # Data Source: aws_eks_cluster
